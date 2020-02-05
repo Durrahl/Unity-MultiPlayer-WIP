@@ -1,0 +1,11 @@
+D:\SERVER STUFF\ClientSim\ClientSim\bin\Debug\netcoreapp2.1\ClientSim.deps.json
+D:\SERVER STUFF\ClientSim\ClientSim\bin\Debug\netcoreapp2.1\ClientSim.runtimeconfig.json
+D:\SERVER STUFF\ClientSim\ClientSim\bin\Debug\netcoreapp2.1\ClientSim.runtimeconfig.dev.json
+D:\SERVER STUFF\ClientSim\ClientSim\bin\Debug\netcoreapp2.1\ClientSim.dll
+D:\SERVER STUFF\ClientSim\ClientSim\bin\Debug\netcoreapp2.1\ClientSim.pdb
+D:\SERVER STUFF\ClientSim\ClientSim\obj\Debug\netcoreapp2.1\ClientSim.csproj.CoreCompileInputs.cache
+D:\SERVER STUFF\ClientSim\ClientSim\obj\Debug\netcoreapp2.1\ClientSim.AssemblyInfoInputs.cache
+D:\SERVER STUFF\ClientSim\ClientSim\obj\Debug\netcoreapp2.1\ClientSim.AssemblyInfo.cs
+D:\SERVER STUFF\ClientSim\ClientSim\obj\Debug\netcoreapp2.1\ClientSim.dll
+D:\SERVER STUFF\ClientSim\ClientSim\obj\Debug\netcoreapp2.1\ClientSim.pdb
+D:\SERVER STUFF\ClientSim\ClientSim\obj\Debug\netcoreapp2.1\ClientSim.csprojAssemblyReference.cache

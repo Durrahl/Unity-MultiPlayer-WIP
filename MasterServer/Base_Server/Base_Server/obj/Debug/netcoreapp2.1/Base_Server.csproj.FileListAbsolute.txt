@@ -1,0 +1,11 @@
+D:\SERVER STUFF\Base_Server\Base_Server\obj\Debug\netcoreapp2.1\Base_Server.csprojAssemblyReference.cache
+D:\SERVER STUFF\Base_Server\Base_Server\obj\Debug\netcoreapp2.1\Base_Server.csproj.CoreCompileInputs.cache
+D:\SERVER STUFF\Base_Server\Base_Server\obj\Debug\netcoreapp2.1\Base_Server.AssemblyInfoInputs.cache
+D:\SERVER STUFF\Base_Server\Base_Server\obj\Debug\netcoreapp2.1\Base_Server.AssemblyInfo.cs
+D:\SERVER STUFF\Base_Server\Base_Server\bin\Debug\netcoreapp2.1\Base_Server.deps.json
+D:\SERVER STUFF\Base_Server\Base_Server\bin\Debug\netcoreapp2.1\Base_Server.runtimeconfig.json
+D:\SERVER STUFF\Base_Server\Base_Server\bin\Debug\netcoreapp2.1\Base_Server.runtimeconfig.dev.json
+D:\SERVER STUFF\Base_Server\Base_Server\bin\Debug\netcoreapp2.1\Base_Server.dll
+D:\SERVER STUFF\Base_Server\Base_Server\bin\Debug\netcoreapp2.1\Base_Server.pdb
+D:\SERVER STUFF\Base_Server\Base_Server\obj\Debug\netcoreapp2.1\Base_Server.dll
+D:\SERVER STUFF\Base_Server\Base_Server\obj\Debug\netcoreapp2.1\Base_Server.pdb
