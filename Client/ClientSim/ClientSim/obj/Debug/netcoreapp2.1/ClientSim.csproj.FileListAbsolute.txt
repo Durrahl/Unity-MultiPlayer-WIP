@@ -9,3 +9,14 @@ D:\SERVER STUFF\ClientSim\ClientSim\obj\Debug\netcoreapp2.1\ClientSim.AssemblyIn
 D:\SERVER STUFF\ClientSim\ClientSim\obj\Debug\netcoreapp2.1\ClientSim.dll
 D:\SERVER STUFF\ClientSim\ClientSim\obj\Debug\netcoreapp2.1\ClientSim.pdb
 D:\SERVER STUFF\ClientSim\ClientSim\obj\Debug\netcoreapp2.1\ClientSim.csprojAssemblyReference.cache
+Z:\Unity_MP\Unity-MultiPlayer-WIP\Client\ClientSim\ClientSim\bin\Debug\netcoreapp2.1\ClientSim.deps.json
+Z:\Unity_MP\Unity-MultiPlayer-WIP\Client\ClientSim\ClientSim\bin\Debug\netcoreapp2.1\ClientSim.runtimeconfig.json
+Z:\Unity_MP\Unity-MultiPlayer-WIP\Client\ClientSim\ClientSim\bin\Debug\netcoreapp2.1\ClientSim.runtimeconfig.dev.json
+Z:\Unity_MP\Unity-MultiPlayer-WIP\Client\ClientSim\ClientSim\bin\Debug\netcoreapp2.1\ClientSim.dll
+Z:\Unity_MP\Unity-MultiPlayer-WIP\Client\ClientSim\ClientSim\bin\Debug\netcoreapp2.1\ClientSim.pdb
+Z:\Unity_MP\Unity-MultiPlayer-WIP\Client\ClientSim\ClientSim\obj\Debug\netcoreapp2.1\ClientSim.csprojAssemblyReference.cache
+Z:\Unity_MP\Unity-MultiPlayer-WIP\Client\ClientSim\ClientSim\obj\Debug\netcoreapp2.1\ClientSim.csproj.CoreCompileInputs.cache
+Z:\Unity_MP\Unity-MultiPlayer-WIP\Client\ClientSim\ClientSim\obj\Debug\netcoreapp2.1\ClientSim.AssemblyInfoInputs.cache
+Z:\Unity_MP\Unity-MultiPlayer-WIP\Client\ClientSim\ClientSim\obj\Debug\netcoreapp2.1\ClientSim.AssemblyInfo.cs
+Z:\Unity_MP\Unity-MultiPlayer-WIP\Client\ClientSim\ClientSim\obj\Debug\netcoreapp2.1\ClientSim.dll
+Z:\Unity_MP\Unity-MultiPlayer-WIP\Client\ClientSim\ClientSim\obj\Debug\netcoreapp2.1\ClientSim.pdb

@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 namespace Base_Server
 {
-    class MP_Client
+    class MP_MasterServer
     {
         List<GameServer> servers = new List<GameServer>();
         string DisasableList()
@@ -26,7 +26,7 @@ namespace Base_Server
         {
             Console.Clear();
             Console.WriteLine("Starting Master Server...");
-            MP_Client clnt = new MP_Client();
+            MP_MasterServer clnt = new MP_MasterServer();
             clnt.startServer();
 
 
@@ -68,7 +68,7 @@ namespace Base_Server
         {
             if (GetServer(serverRef) == null)
             {
-                String[] properties = passedString.Split((", "));
+                String[] properties = passedString.Split((","));
                 GameServer tmpServer = new GameServer();
 
                 Console.WriteLine("Recieved Request: Name: " + properties[1] + " " + properties[3] + "/" + properties[2] + " Players!");
@@ -132,99 +132,116 @@ namespace Base_Server
             // Listen Loop
             while (true)
             {
-                // Setting
-                Console.Clear();
-                Console.WriteLine("Waiting For a connection");
+                TcpClient client;
+                try
+                {
+                    // Setting
+                    Console.Clear();
+                    Console.WriteLine("Waiting For a connection");
 
-                // Accept Client
-                TcpClient client = server.AcceptTcpClient();
-                Console.WriteLine("Connected!");
+                    // Accept Client
+                    client = server.AcceptTcpClient();
+                    Console.WriteLine("Connected!");
 
-                // Setting Default Parameters
-                strData = null;
-                NetworkStream stream = client.GetStream();
-                byte[] buffer = new byte[client.ReceiveBufferSize];
+                    // Setting Default Parameters
+                    strData = null;
+                    NetworkStream stream = client.GetStream();
+                    byte[] buffer = new byte[client.ReceiveBufferSize];
 
-                // Reading Stream
-                int byteMessageSize = stream.Read(buffer, 0, client.ReceiveBufferSize);
+                    // Reading Stream
+                    int byteMessageSize = stream.Read(buffer, 0, client.ReceiveBufferSize);
 
-                // Convert To Text
-                strData = Encoding.ASCII.GetString(buffer, 0, byteMessageSize);
-                Console.WriteLine("Recieved : " + strData);
+                    // Convert To Text
+                    strData = Encoding.ASCII.GetString(buffer, 0, byteMessageSize);
+                    Console.WriteLine("Recieved : " + strData);
 
-                // Proccess Request
-                IPEndPoint clientAddress = (IPEndPoint)client.Client.RemoteEndPoint;
-                String result = ProccessResult(strData, clientAddress);
+                    // Proccess Request
+                    String result;
+                    if (strData != null)
+                    {
+                        IPEndPoint clientAddress = (IPEndPoint)client.Client.RemoteEndPoint;
+                        result = ProccessResult(strData, clientAddress);
+                    }
+                    else
+                    {
+                        result = "Inputted Data Did Not Pass Required Input Sterlisation Tests (EMPTY or UNREADABLE)";
+                    }
 
-                // Convert Result
-                byte[] returnResults = Encoding.ASCII.GetBytes(result);
 
-                // Return Result
-                stream.Write(returnResults, 0, byteMessageSize);
-                client.Close();
-                
+                    // Convert Result
+                    byte[] returnResults = Encoding.ASCII.GetBytes(result);
+
+                    // Return Result
+                    stream.Write(returnResults, 0, result.Length);
+                    client.Close();
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("EXCEPTION CAUGHT IN LISTEN LOOP: " + e.Message);
+                }
             }
         }
 
         String ProccessResult(String input, IPEndPoint clientEP)
         {
-            String result = "";
+            String result = "Error Selection Option";
 
             String[] segments = input.Split(",");
             String cat = segments[0];
 
+            Console.WriteLine("Got request with line starting: " + segments[0]);
+
             // Register Server
-            if (cat == "regsrv")
+            switch (cat)
             {
-                RegisterServer((EndPoint)clientEP, input);
+                // Register Server
+                case "regsrv":
+                    RegisterServer((EndPoint)clientEP, input);
+                    result = "Registered Server";
+
+                    break;
+
+                // De-Register Server
+                case "delsrv":
+                    DeRegisterServer((EndPoint)clientEP);
+                    break;
+
+                // Get Server
+                case "findsrv":
+                    return DisasableList();
+                    break;
+
+                // Update Server
+                case "updtsrv":
+                    UpdateServer((EndPoint)clientEP, input);
+                    break;
+
+                // Enroll In party System
+                case "prtyenrl":
+
+                    break;
+
+                // De-Enroll in party System
+                case "prtydenrl":
+
+                    break;
+
+                // Matchmake solo
+                case "mmsolo":
+
+                    break;
+
+                // Matchmake party
+                case "mmparty":
+
+                    break;
+
+                default:
+                    return "ERROR: THIS COMMAND DID NOT MATCH ANY ACCEPTED INPUT.";
+                    break;
             }
 
-            // De-Register Server
-            else if (cat == "delsrv")
-            {
-                DeRegisterServer((EndPoint)clientEP);
-            }
 
-            // Get Server List
-            else if (cat == "findsrv")
-            {
-                return DisasableList();
-            }
-
-            // Update Server
-            else if (cat == "updtsrv")
-            {
-
-            }
-
-            // Enroll In party System.
-            else if (cat == "prtyenrl")
-            {
-
-            }
-
-            // De-Enroll In party System.
-            else if (cat == "prtydenrl")
-            {
-
-            }
-
-            // Matchmake solo
-            else if (cat == "mmsolo")
-            {
-
-            }
-
-            // Matchmake party
-            else if (cat == "mmparty")
-            {
-
-            }
-
-            else
-            {
-                return "ERROR: THIS COMMAND DID NOT MATCH ANY ACCEPTED INPUT.";
-            }
 
             return result;
         }

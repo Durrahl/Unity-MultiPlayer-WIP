@@ -59,6 +59,12 @@ namespace ClientSim
 
         void Connect(string message = " ")
         {
+            if (message.Length < 1)
+            {
+                Console.WriteLine("Found Too Short Input");
+                return;
+            }
+            
             Socket sock = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             IPAddress targetAddress = IPAddress.Parse("51.89.164.171");
             IPEndPoint endPoint = new IPEndPoint(targetAddress, 800);

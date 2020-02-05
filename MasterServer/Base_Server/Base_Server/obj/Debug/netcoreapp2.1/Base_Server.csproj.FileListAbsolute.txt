@@ -9,3 +9,14 @@ D:\SERVER STUFF\Base_Server\Base_Server\bin\Debug\netcoreapp2.1\Base_Server.dll
 D:\SERVER STUFF\Base_Server\Base_Server\bin\Debug\netcoreapp2.1\Base_Server.pdb
 D:\SERVER STUFF\Base_Server\Base_Server\obj\Debug\netcoreapp2.1\Base_Server.dll
 D:\SERVER STUFF\Base_Server\Base_Server\obj\Debug\netcoreapp2.1\Base_Server.pdb
+Z:\Unity_MP\Unity-MultiPlayer-WIP\MasterServer\Base_Server\Base_Server\bin\Debug\netcoreapp2.1\Base_Server.deps.json
+Z:\Unity_MP\Unity-MultiPlayer-WIP\MasterServer\Base_Server\Base_Server\bin\Debug\netcoreapp2.1\Base_Server.runtimeconfig.json
+Z:\Unity_MP\Unity-MultiPlayer-WIP\MasterServer\Base_Server\Base_Server\bin\Debug\netcoreapp2.1\Base_Server.runtimeconfig.dev.json
+Z:\Unity_MP\Unity-MultiPlayer-WIP\MasterServer\Base_Server\Base_Server\bin\Debug\netcoreapp2.1\Base_Server.dll
+Z:\Unity_MP\Unity-MultiPlayer-WIP\MasterServer\Base_Server\Base_Server\bin\Debug\netcoreapp2.1\Base_Server.pdb
+Z:\Unity_MP\Unity-MultiPlayer-WIP\MasterServer\Base_Server\Base_Server\obj\Debug\netcoreapp2.1\Base_Server.csprojAssemblyReference.cache
+Z:\Unity_MP\Unity-MultiPlayer-WIP\MasterServer\Base_Server\Base_Server\obj\Debug\netcoreapp2.1\Base_Server.csproj.CoreCompileInputs.cache
+Z:\Unity_MP\Unity-MultiPlayer-WIP\MasterServer\Base_Server\Base_Server\obj\Debug\netcoreapp2.1\Base_Server.AssemblyInfoInputs.cache
+Z:\Unity_MP\Unity-MultiPlayer-WIP\MasterServer\Base_Server\Base_Server\obj\Debug\netcoreapp2.1\Base_Server.AssemblyInfo.cs
+Z:\Unity_MP\Unity-MultiPlayer-WIP\MasterServer\Base_Server\Base_Server\obj\Debug\netcoreapp2.1\Base_Server.dll
+Z:\Unity_MP\Unity-MultiPlayer-WIP\MasterServer\Base_Server\Base_Server\obj\Debug\netcoreapp2.1\Base_Server.pdb
