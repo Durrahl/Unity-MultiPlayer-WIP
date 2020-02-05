@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 namespace Base_Server
 {
-    class Program
+    class MP_Client
     {
         List<GameServer> servers = new List<GameServer>();
         string DisasableList()
@@ -26,8 +26,8 @@ namespace Base_Server
         {
             Console.Clear();
             Console.WriteLine("Starting Master Server...");
-            Program prgm = new Program();
-            prgm.startServer();
+            MP_Client clnt = new MP_Client();
+            clnt.startServer();
 
 
 
@@ -173,17 +173,57 @@ namespace Base_Server
             String[] segments = input.Split(",");
             String cat = segments[0];
 
+            // Register Server
             if (cat == "regsrv")
             {
                 RegisterServer((EndPoint)clientEP, input);
             }
+
+            // De-Register Server
             else if (cat == "delsrv")
             {
                 DeRegisterServer((EndPoint)clientEP);
             }
+
+            // Get Server List
             else if (cat == "findsrv")
             {
-                return "GetFinder";
+                return DisasableList();
+            }
+
+            // Update Server
+            else if (cat == "updtsrv")
+            {
+
+            }
+
+            // Enroll In party System.
+            else if (cat == "prtyenrl")
+            {
+
+            }
+
+            // De-Enroll In party System.
+            else if (cat == "prtydenrl")
+            {
+
+            }
+
+            // Matchmake solo
+            else if (cat == "mmsolo")
+            {
+
+            }
+
+            // Matchmake party
+            else if (cat == "mmparty")
+            {
+
+            }
+
+            else
+            {
+                return "ERROR: THIS COMMAND DID NOT MATCH ANY ACCEPTED INPUT.";
             }
 
             return result;
